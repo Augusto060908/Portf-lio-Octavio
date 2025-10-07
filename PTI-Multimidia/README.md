@@ -15,7 +15,7 @@ Durante o desenvolvimento, o grupo foi responsável por idealizar e estruturar u
 ## 🎨 Principais Entregas
 - **Criação completa da identidade visual** da marca  
 - **Brandbook oficial** com regras de uso, tipografia, cores e aplicações  
-- **Monografia** com embasamento teórico e conceitual  
+- **Tipoografia** com embasamento teórico e conceitual  
 - **Moodboards** e **referências visuais**  
 - **Vinhetas animadas** para as duas logos  
 - **Edição e produção de vídeos institucionais**  
@@ -30,7 +30,7 @@ Durante o projeto, fui responsável por:
 - Criar **a maior parte da identidade visual** da marca  
 - Desenvolver **todas as aplicações da logo** (principais e variações)  
 - Realizar **sozinho** a **aplicação de todos os mockups** da marca  
-- Participar ativamente na **escolha da monografia**  
+- Participar ativamente na **escolha da tipografia**  
 - Contribuir na **criação dos moodboards** e definição do **conceito visual**  
 - Produzir e editar **vídeos institucionais e vinhetas animadas** das duas logos  
 - Colaborar na **organização do brandbook** e **apresentação final**
@@ -46,6 +46,11 @@ Este foi um projeto **complexo e colaborativo**, resultando em uma nota **8.5**,
 - **Aplicação de Mockups e Materiais Visuais**  
 - **Gestão de Projetos e Trabalho em Equipe**  
 - **Apresentação Profissional e Comunicação Visual**
+
+---
+
+## 📫 Apresentação
+[Apresentação Final]([https://www.linkedin.com/in/octavio-augusto-ramalho-brand%C3%A3o-pires-0229b622b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app](https://docs.google.com/presentation/d/1ozJUFS2qOEDutl4lE4HNe6-PSNQ8OFWk/edit?usp=sharing&ouid=111393125202540954369&rtpof=true&sd=true))
 
 ---
 📅 **Duração:** 1 ano  
