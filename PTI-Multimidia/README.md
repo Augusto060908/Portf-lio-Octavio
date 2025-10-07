@@ -50,7 +50,8 @@ Este foi um projeto **complexo e colaborativo**, resultando em uma nota **8.5**,
 ---
 
 ## 📫 Apresentação
-[Apresentação Final]([https://www.linkedin.com/in/octavio-augusto-ramalho-brand%C3%A3o-pires-0229b622b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app](https://docs.google.com/presentation/d/1ozJUFS2qOEDutl4lE4HNe6-PSNQ8OFWk/edit?usp=sharing&ouid=111393125202540954369&rtpof=true&sd=true))
+[Apresentação Final – Google Slides](https://docs.google.com/presentation/d/1ozJUFS2qOEDutl4lE4HNe6-PSNQ8OFWk/edit?usp=sharing&ouid=111393125202540954369&rtpof=true&sd=true)
+
 
 ---
 📅 **Duração:** 1 ano  
