@@ -38,11 +38,33 @@ O coração do projeto está no script M que limpa e consulta a API:
 
 ```powerquery
 let
+    // 1. Busca os dados na sua SuperTable
     Fonte = Excel.CurrentWorkbook(){[Name="SuperTable"]}[Content],
-    LimpezaCNPJ = Table.TransformColumns(Fonte, {{"CNPJ", each Text.Select(Text.From(_), {"0".."9"})}}),
-    ConsultaAPI = Table.AddColumn(LimpezaCNPJ, "Dados", each 
-        try Json.Document(Web.Contents("[https://brasilapi.com.br/api/cnpj/v1/](https://brasilapi.com.br/api/cnpj/v1/)" & [CNPJ])) otherwise null
+    
+    // 2. Garante que o CNPJ seja texto e remove vazios
+    PreparoCNPJ = Table.TransformColumnTypes(Fonte,{{"CNPJ", type text}}),
+    FiltrarVazios = Table.SelectRows(PreparoCNPJ, each ([CNPJ] <> null and [CNPJ] <> "")),
+    LimparSimbolos = Table.TransformColumns(FiltrarVazios, {{"CNPJ", each Text.Select(_, {"0".."9"})}}),
+
+    // 3. Faz a chamada para a Brasil API
+    ConsultaAPI = Table.AddColumn(LimparSimbolos, "Dados", each 
+        try Json.Document(Web.Contents("https://brasilapi.com.br/api/cnpj/v1/" & [CNPJ])) otherwise null
     ),
-    // ... expansão e formatação de dados ...
+
+    // 4. Expande os campos, incluindo o "numero" que estava faltando
+    Expandir = Table.ExpandRecordColumn(ConsultaAPI, "Dados", 
+        {"razao_social", "logradouro", "numero", "descricao_situacao_cadastral"}, 
+        {"API_Razao", "API_Logradouro", "API_Numero", "API_Situacao"}
+    ),
+
+    // 5. Cria a coluna de Endereço Completo (Logradouro + Vírgula + Número)
+    EnderecoComVirgula = Table.AddColumn(Expandir, "API_Endereco", each 
+        if [API_Logradouro] <> null then 
+            Text.From([API_Logradouro]) & ", " & Text.From([API_Numero]) 
+        else null
+    ),
+
+    // 6. Remove as colunas auxiliares para manter a planilha limpa
+    RemoverAuxiliares = Table.RemoveColumns(EnderecoComVirgula,{"API_Logradouro", "API_Numero", "RazãoAPI", "EndereçoAPI", "Situação", "Check Razão", "Check Endereço", "DHUB"})
 in
-    Final
+    RemoverAuxiliares
