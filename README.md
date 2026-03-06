@@ -40,6 +40,7 @@ Busco sempre entregar resultados que unam **criatividade**, **funcionalidade** e
 - **Google Docs**  
 - **Google Colab**  
 - **Google Forms**
+- **Pacote Office**
 
 ---
 
